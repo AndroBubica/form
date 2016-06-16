@@ -1,0 +1,23 @@
+.custom-circle-counter {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.custom-circle-counter li {
+  counter-increment: circle-counter;
+}
+
+.custom-circle-counter li:before {
+  content: counter(circle-counter);
+  margin-right: 5px;
+  font-size: 80%;
+  background: url("../img/circle.png");
+  color: black;
+  font-weight: normal;
+  padding: 5px 8px;
+  height: 20px;
+  position: absolute;
+  left: 6px;
+  margin-top: 22px;
+}

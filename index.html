@@ -1,0 +1,205 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Semantic Form Challenge</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  <!--[if lte IE 9]>
+  <link rel="stylesheet" type="text/css" href="js/validator.js">
+  <![endif]-->
+  <!--[if lt IE 9]>
+  <link rel="stylesheet" type="text/css" href="css/ie8.css" />
+  <![endif]-->
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<div class="wraper">
+  <header>
+    <h1>Sign Up Now</h1>
+    <p>Pick your new Website, free forever.</p>
+    <hr>
+  </header>
+  <section>
+    <form id="formToValidate" method="post">
+      <ol class="custom-circle-counter">
+        <li>
+          <h2>Pick a website address.</h2>
+          <fieldset>
+            <label for="website" id="websiteLabel">Website address:</label>
+            <div class="websiteAddress">
+              <input id="website" name="website" type="text" required="required"
+                     placeholder="website name" aria-required="true"
+                     aria-labelledby="websiteLabel"
+              />
+              <span>.free-websites.com</span>
+            </div>
+          </fieldset>
+        </li>
+        <li>
+          <h2>Create an account.</h2>
+          <div>
+            <fieldset>
+              <label for="fullName" id="fullNameLabel">Full name:</label>
+              <div>
+                <input id="fullName" name="fullName" type="text"
+                       placeholder="Full name" aria-required="true"
+                       aria-labelledby="fullNameLabel" required="required"
+                />
+              </div>
+              <label for="emailAddress" id="emailAddressLabel">
+                Email address:
+              </label>
+              <div>
+                <input id="emailAddress" name="emailAddress"
+                       placeholder="Email.." aria-required="true"
+                       aria-labelledby="emailAddressLabel" type="email"
+                       required="required"
+                />
+              </div>
+              <label for="password" id="passwordLabel">Password:</label>
+              <div>
+                <input id="password" name="password" type="password"
+                       placeholder="Password" aria-required="true"
+                       aria-labelledby="passwordLabel" autocomplete="off"
+                       required="required"
+                />
+              </div>
+              <div id="revealPassword">
+                <input type="checkbox" value="show" name="showPassowrd"
+                       id="showPassowrd" aria-labelledby="showPassowrd"
+                       class="check_box">
+                <label id="jsShowPassword" for="showPassowrd" tabindex="0"></label>
+                <span for="showPassowrd" id="showPassowrdLabel">
+                  Reveal password
+                </span>
+              </div>
+            </fieldset>
+          </div>
+        </li>
+        <li>
+          <h2>Enter your payment info.</h2>
+          <fieldset>
+            <label for="cardNumber" id="cardNumberLabel">
+              Credit card number:
+            </label>
+            <div>
+              <input type="number" name="cardNumber" required="required"
+                     id="cardNumber" autocomplete="off"
+                     aria-required="true" aria-labelledby="cardNumberLabel"
+                     placeholder="4000 0000 0000 0002" class="creditCardNumber"
+              />
+              <input type="radio" class="radioButton" name="creditCard"
+                     value="visa" required="required">
+              <img src="img/cc-icon-visa.png" alt="visa" id="visa">
+              <input type="radio" class="radioButton" value="masterCard"
+                     name="creditCard">
+              <img src="img/cc-icon-mastercard.png" alt="masterCard" id="mastercard">
+              <input type="radio" class="radioButton" value="discover"
+                     name="creditCard">
+              <img src="img/cc-icon-discover.png" alt="discover" id="discover">
+              <input type="radio" class="radioButton" value="amex"
+                     name="creditCard">
+              <img src="img/cc-icon-amex.png" id="amex" alt="amex">
+            </div>
+            <label for="securityCode" id="securityCodeLabel" class="firstPart">
+              Security code:
+            </label>
+            <label id="expirationDateLabel" class="secondPart">
+              Expiration date:
+            </label>
+            <div>
+              <input type="number" aria-labelledby="securityCodeLabel"
+                     id="securityCode" name="securityCode" autocomplete="off"
+                     required="required" aria-required="true" placeholder="123"
+                     class="securityCode"
+              />
+              <select name="creditCardMonth" required="required"
+                      aria-required="true" aria-labelledby="expirationDateLabel"
+                      title="credit card expiration month" class="creditCardMonth" >
+                <option value="01">01 - January</option>
+                <option value="02">02 - February</option>
+                <option value="03">03 - March</option>
+                <option value="04">04 - April</option>
+                <option value="05">05 - May</option>
+                <option value="06">06 - June</option>
+                <option value="07">07 - July</option>
+                <option value="08">08 - August</option>
+                <option value="09">09 - September</option>
+                <option value="10">10 - October</option>
+                <option value="11">11 - November</option>
+                <option value="12">12 - December</option>
+              </select>
+              /
+              <select name="creditCardYear" required="required"
+                      aria-required="true" aria-labelledby="expirationDateLabel"
+                      title="credit card expiration year" class="creditCardYear"
+                      id="creditCardYear">
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+                <option value="2029">2029</option>
+                <option value="2030">2030</option>
+              </select>
+            </div>
+          </fieldset>
+        </li>
+      </ol>
+      <div class="submitButton">
+        <button type="submit" id="submit">
+          Create your website
+        </button>
+      </div>
+    </form>
+  </section>
+</div>
+
+<!--<label for="password" generated="true" class="error">
+<img src="img/warning.png" class="errorMsg" style="opacity: 0.5;">
+Enter password
+</label>-->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+<script src=
+          "https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.9.0/jquery.validate.min.js"
+        type="text/javascript">
+</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="js/vendor/jquery.creditCardValidator.js"></script>
+
+<!--<script src="js/validator.js"></script>-->
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+</script>
+</body>
+</html>
