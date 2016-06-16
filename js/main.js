@@ -53,6 +53,3 @@ $(function() {
     }
   },{ accept: ['visa', 'mastercard', 'discover', 'amex'] });
 });
-
-
-
